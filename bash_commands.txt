@@ -1,0 +1,9 @@
+cd rl-job-scheduler
+python -m venv venv
+source venv/bin/activate       # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+python src/train.py            # trains in ~1 second, saves outputs/
+python src/evaluate.py         # compare vs baselines
+python src/visualise.py        # Gantt chart
+pytest tests/ -v               # 42 unit tests
